@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Wisata Surabaya')),
+      appBar: AppBar(title: const Text('Wisata Luar Negeri')),
       body: ListView.builder(
         itemCount: placeList.length,
         itemBuilder: (context, index) {

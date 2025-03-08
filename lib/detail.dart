@@ -37,21 +37,18 @@ class DetailScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
-                    children: const [
-                      Icon(Icons.calendar_today),
-                      Text('Open Everyday'),
-                    ],
+                    children: [Icon(Icons.calendar_today), Text(place.dayOpen)],
                   ),
                   Column(
-                    children: const [
+                    children: [
                       Icon(Icons.schedule),
-                      Text('08:00 - 16:00'),
+                      Text('${place.openTime} - ${place.closeTime}'),
                     ],
                   ),
                   Column(
-                    children: const [
+                    children: [
                       Icon(Icons.attach_money),
-                      Text('Rp 10.000,-'),
+                      Text('Rp.${place.ticketPrice}'),
                     ],
                   ),
                 ],
@@ -61,8 +58,8 @@ class DetailScreen extends StatelessWidget {
             // Container for description
             Container(
               padding: EdgeInsets.all(16),
-              child: const Text(
-                'Museum inside a decommissioned Russian war submarine with tours & an adjacent park with cafes. Clean and well maintained. Car park cost 10k, entrance fee 15k/person. You can see KRI Pasopati there, it is a Russian whiskey class. You can also watch the video about the Indonesian Navy at the building beside the submarine.',
+              child: Text(
+                place.description,
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, fontFamily: 'Roboto'),
               ),
